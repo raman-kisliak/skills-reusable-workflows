@@ -1,0 +1,15 @@
+name: Organization CI
+
+on:
+  push:
+    branches: [ "main" ]  # ⬅  W momencie uruchomnienia to zostanie zastąpione domyślnym branchem w repo. 
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run a one-line scripto
+        run: echo We meet again mr Bond
